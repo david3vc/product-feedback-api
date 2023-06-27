@@ -22,12 +22,18 @@ namespace Infraestructure.Context
         }
 
         public DbSet<Category> Categories { get; set; }
+        public DbSet<FeedbackStatus> FeedbackStatuses { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new CategoryMap());
+            modelBuilder.ApplyConfiguration(new FeedbackStatusMap());
+            modelBuilder.ApplyConfiguration(new FeedbackMap());
+            modelBuilder.ApplyConfiguration(new CommentMap());
         }
     }
 }

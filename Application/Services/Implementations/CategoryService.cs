@@ -1,4 +1,5 @@
-﻿using Application.Services.Abstractions;
+﻿using Application.Dtos;
+using Application.Services.Abstractions;
 using AutoMapper;
 using Domain;
 using Infraestructure.Repositories.Abstractions;
