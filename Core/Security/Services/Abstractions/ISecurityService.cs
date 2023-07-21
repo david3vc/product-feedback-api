@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Security.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,6 @@ namespace Core.Security.Services.Abstractions
     {
         string HashPassword(string userName, string hashedPassword);
         bool VerifyHashedPassword(string userName, string hashedPassword, string providedPassword);
+        SecurityEntity JwtSecurity(string jwtSecrectKey);
     }
 }

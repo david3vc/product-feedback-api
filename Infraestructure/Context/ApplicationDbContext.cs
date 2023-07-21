@@ -25,6 +25,7 @@ namespace Infraestructure.Context
         public DbSet<FeedbackStatus> FeedbackStatuses { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,6 +35,7 @@ namespace Infraestructure.Context
             modelBuilder.ApplyConfiguration(new FeedbackStatusMap());
             modelBuilder.ApplyConfiguration(new FeedbackMap());
             modelBuilder.ApplyConfiguration(new CommentMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
         }
     }
 }

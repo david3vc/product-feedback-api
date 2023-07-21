@@ -14,10 +14,12 @@ namespace Domain
         public string CountVotes { get; set; }
         public int? IdCategory { get; set; }
         public int? IdFeedbackStatus { get; set; }
+        public int? IdUser { get; set; }
         public int Status { get; set; }
 
         public virtual FeedbackStatus? FeedbackStatus { get; set; }
         public virtual Category? Category { get; set; }
+        public virtual User? User { get; set; }
         public virtual ICollection<Comment>? Comments { get; set; }
     }
 }

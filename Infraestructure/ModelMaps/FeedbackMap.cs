@@ -21,10 +21,12 @@ namespace Infraestructure.ModelMaps
             builder.Property(e => e.CountVotes).HasColumnName("count_votes");
             builder.Property(e => e.IdCategory).HasColumnName("id_category");
             builder.Property(e => e.IdFeedbackStatus).HasColumnName("id_feedback_status");
+            builder.Property(e => e.IdUser).HasColumnName("id_usuario");
             builder.Property(e => e.Status).HasColumnName("status");
 
             builder.HasOne(f => f.Category).WithMany(g => g.Feedbacks).HasForeignKey(f => f.IdCategory);
             builder.HasOne(f => f.FeedbackStatus).WithMany(g => g.Feedbacks).HasForeignKey(f => f.IdFeedbackStatus);
+            builder.HasOne(f => f.User).WithMany(g => g.Feedbacks).HasForeignKey(f => f.IdUser);
         }
     }
 }
